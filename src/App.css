@@ -4,6 +4,35 @@
   padding: 2rem;
   text-align: center;
 }
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+.toggle-btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+}
+.product-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.product-card.out {
+  opacity: 0.6;
+}
+.cart {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
 
 .logo {
   height: 6em;
