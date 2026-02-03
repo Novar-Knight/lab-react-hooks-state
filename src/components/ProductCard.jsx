@@ -1,13 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import styles from "../styles/ProductCard.module.css";
 
-const ProductCard = ({ product, addTocart }) => {
+const ProductCard = ({ product, addToCart }) => {
   const [addedToCart, setAddedToCart] = useState(false);
 
   function handleAddToCart() {
+
     setAddedToCart(true);
 
-    if (addedToCart) addTocart(product);
+    if (addToCart) addToCart(product);
   }
   return (
     <div
@@ -17,11 +19,13 @@ const ProductCard = ({ product, addTocart }) => {
       <p>Price: {product.price}</p>
       <p>Status: {product.inStock ? "In Stock" : "Out of Stock"}</p>
 
-      {/* TODO: Implement Add to Cart button functionality */}
+      {/* TODO: Implement Add to Cart button functionality*/ }   
       <button onClick={handleAddToCart} data-testid={"product-" + product.id}>
         {addedToCart ? "Added to Cart" : "Add to Cart"}
       </button>
     </div>
+  
+
   );
 };
 
